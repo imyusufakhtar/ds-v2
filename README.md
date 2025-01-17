@@ -80,12 +80,6 @@ The **ds-v2** (Digital Showroom Version 2) is a modern, fully responsive web app
 
 ---
 
-## Live Demo
-
-Experience the live demo here: [ds-v2 Live Demo](https://md-yusuf.netlify.app/)
-
----
-
 ## Project Highlights
 
 - **98% Mobile-Friendly Score**: Excellent mobile compatibility.
