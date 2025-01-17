@@ -1,27 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Loader } from '../Loader';
+import React from 'react';
 
-const AboutSection = () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    // Function to fetch data from an API
-    const fetchData = async () => {
-      try {
-        const response = await fetch("AboutMeData/AboutMe.json"); // Replace with your API endpoint
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []); // Empty dependency array ensures this effect runs only once
-
-  // Render loading state or error message if needed
+const AboutSection = ({ data }) => {
   if (!data) {
-    return <Loader/>;
+    return null; // No data to display
   }
 
   return (

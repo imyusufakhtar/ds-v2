@@ -8,16 +8,42 @@ import ResumeSkills from './ResumeSkills';
 import { Loader } from '../Loader';
 
 const ResumeMain = () => {
+  const [resumeData, setResumeData] = useState({
+    sidebar: null,
+    projects: null,
+    experience: null,
+    skills: null,
+    education: null,
+  });
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Ensure loader stays visible for at least 1.5 seconds
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
+    const fetchData = async () => {
+      try {
+        const [sidebarData, projectsData, experienceData, skillsData, educationData] = await Promise.all([
+          fetch("ResumeData/ResumeSidebar.json").then((res) => res.json()),
+          fetch("ResumeData/ResumeProject.json").then((res) => res.json()),
+          fetch("ResumeData/ResumeExp.json").then((res) => res.json()),
+          fetch("ResumeData/ResumeSkills.json").then((res) => res.json()),
+          fetch("ResumeData/ResumeEducation.json").then((res) => res.json()),
+        ]);
 
-    // Cleanup timer on component unmount
-    return () => clearTimeout(timer);
+        setResumeData({
+          sidebar: sidebarData,
+          projects: projectsData,
+          experience: experienceData,
+          skills: skillsData,
+          education: educationData,
+        });
+
+        // Ensure loader stays visible for at least 1.5 seconds
+        setTimeout(() => setIsLoading(false), 1500);
+      } catch (error) {
+        console.error("Error fetching resume data:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   if (isLoading) {
@@ -25,19 +51,17 @@ const ResumeMain = () => {
   }
 
   return (
-    <>
-      <div className="content">
-        <div className="portfolio-resume-container">
-          <ResumeSidebar />
-          <div className="portfolio-resume-content">
-            <ResumeExperience />
-            <ResumeProjects />
-            <ResumeSkills />
-            <ResumeEducation />
-          </div>
+    <div className="content">
+      <div className="portfolio-resume-container">
+        <ResumeSidebar data={resumeData.sidebar} />
+        <div className="portfolio-resume-content">
+          <ResumeExperience data={resumeData.experience} />
+          <ResumeProjects data={resumeData.projects} />
+          <ResumeSkills data={resumeData.skills} />
+          <ResumeEducation data={resumeData.education} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -5,16 +5,37 @@ import ProjectSummary from './ProjectSummary';
 import { Loader } from '../Loader';
 
 const ProjectsMain = () => {
+  const [summaryData, setSummaryData] = useState(null);
+  const [projectsData, setProjectsData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Ensure loader stays visible for at least 1.5 seconds
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
+    const fetchSummaryData = async () => {
+      try {
+        const response = await fetch("ProjectsData/ProjectSummary.json");
+        const result = await response.json();
+        setSummaryData(result);
+      } catch (error) {
+        console.error("Error fetching ProjectSummary data:", error);
+      }
+    };
 
-    // Cleanup timer on component unmount
-    return () => clearTimeout(timer);
+    const fetchProjectsData = async () => {
+      try {
+        const response = await fetch("ProjectsData/ProjectLists.json");
+        const result = await response.json();
+        setProjectsData(result.projects);
+      } catch (error) {
+        console.error("Error fetching ProjectLists data:", error);
+      }
+    };
+
+    // Fetch all data in parallel
+    Promise.all([fetchSummaryData(), fetchProjectsData()])
+      .then(() => {
+        // Ensure loader stays visible for at least 1.5 seconds
+        setTimeout(() => setIsLoading(false), 1500);
+      });
   }, []);
 
   if (isLoading) {
@@ -22,14 +43,12 @@ const ProjectsMain = () => {
   }
 
   return (
-    <>
-      <div className="content">
-        <section className="projects-section">
-          <ProjectSummary />
-          <ProjectsContainer />
-        </section>
-      </div>
-    </>
+    <div className="content">
+      <section className="projects-section">
+        <ProjectSummary data={summaryData} />
+        <ProjectsContainer data={projectsData} />
+      </section>
+    </div>
   );
 };
 

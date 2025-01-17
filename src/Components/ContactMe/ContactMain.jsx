@@ -8,7 +8,7 @@ const ContactMain = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Ensure loader stays visible for at least 1 seconds
+    // Ensure loader stays visible for at least 1 second
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
@@ -22,14 +22,12 @@ const ContactMain = () => {
   }
 
   return (
-    <>
-      <main className="content">
-        <section className="contact-section">
-          <ContactForm />
-          <ContactInfo />
-        </section>
-      </main>
-    </>
+    <main className="content">
+      <section className="contact-section">
+        <ContactForm />
+        <ContactInfo />
+      </section>
+    </main>
   );
 };
 

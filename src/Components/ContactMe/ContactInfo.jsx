@@ -4,24 +4,22 @@ const ContactInfo = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    // Function to fetch data from an API
+    // Fetch data for contact info
     const fetchData = async () => {
       try {
         const response = await fetch("OtherData/ContactInfo.json"); // Replace with your API endpoint
         const result = await response.json();
         setData(result);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error fetching contact info:', error);
       }
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures this effect runs only once
+  }, []);
 
-  // Render loading state or error message if needed
   if (!data) {
-    // return <div className="loading"></div>;
-    return null;
+    return null; // Return nothing if data is not yet loaded
   }
 
   return (

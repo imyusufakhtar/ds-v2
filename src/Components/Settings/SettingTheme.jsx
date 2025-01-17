@@ -1,20 +1,3 @@
-// const SettingTheme = () =>{
-//     return(
-//         <>
-//         <div className="settings-card">
-//             <div className="settings-content">
-//                 <h2 className="settings-title">Theme</h2>
-//                 <p className="settings-description">Toggle between Light Mode and Dark Mode to adjust the appearance based on your preference.</p>
-//                 <span className="settings-link">Dark Mode</span>
-//             </div>
-//         </div>
-//         </>
-//     )
-// }
-
-// export default SettingTheme;
-
-
 import React, { useState, useEffect } from 'react';
 
 const SettingTheme = () => {
@@ -35,25 +18,20 @@ const SettingTheme = () => {
     });
   };
 
-  return(
-    <>
+  return (
     <div className="settings-card">
-        <div className="settings-content">
-            <h2 className="settings-title">Theme</h2>
-            <p className="settings-description">Toggle between Light Mode and Dark Mode to adjust the appearance based on your preference.</p>
-            <span className="settings-theme-link" onClick={toggleTheme}>
-            <i className={darkMode ? 'fas fa-sun icon' : 'fas fa-moon icon'}></i>
-            {darkMode ? 'Light theme' : 'Dark theme'}
-            </span>
-        </div>
+      <div className="settings-content">
+        <h2 className="settings-title">Theme</h2>
+        <p className="settings-description">
+          Toggle between Light Mode and Dark Mode to adjust the appearance based on your preference.
+        </p>
+        <span className="settings-theme-link" onClick={toggleTheme}>
+          <i className={darkMode ? 'fas fa-sun icon' : 'fas fa-moon icon'}></i>
+          {darkMode ? 'Light theme' : 'Dark theme'}
+        </span>
+      </div>
     </div>
-    </>
-)
-}
-
-{/* <button className="theme" onClick={toggleTheme}>
-        <i className={darkMode ? 'fas fa-sun icon' : 'fas fa-moon icon'}></i>
-        {darkMode ? 'Light theme' : 'Dark theme'}
-      </button> */}
+  );
+};
 
 export default SettingTheme;

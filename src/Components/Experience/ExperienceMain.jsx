@@ -6,16 +6,48 @@ import ExperienceLists from './ExperienceLists';
 import { Loader } from '../Loader';
 
 const ExperienceMain = () => {
+  const [headingData, setHeadingData] = useState(null);
+  const [imageData, setImageData] = useState(null);
+  const [listData, setListData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Ensure loader stays visible for at least 1.3 seconds
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1300);
+    const fetchHeadingData = async () => {
+      try {
+        const response = await fetch("ExperienceData/ExperienceHeading.json");
+        const result = await response.json();
+        setHeadingData(result);
+      } catch (error) {
+        console.error('Error fetching ExperienceHeading data:', error);
+      }
+    };
 
-    // Cleanup timer on component unmount
-    return () => clearTimeout(timer);
+    const fetchImageData = async () => {
+      try {
+        const response = await fetch("ExperienceData/ExperienceImage.json");
+        const result = await response.json();
+        setImageData(result);
+      } catch (error) {
+        console.error('Error fetching ExperienceImage data:', error);
+      }
+    };
+
+    const fetchListData = async () => {
+      try {
+        const response = await fetch("ExperienceData/ExperienceLists.json");
+        const result = await response.json();
+        setListData(result);
+      } catch (error) {
+        console.error('Error fetching ExperienceLists data:', error);
+      }
+    };
+
+    // Fetch all data in parallel
+    Promise.all([fetchHeadingData(), fetchImageData(), fetchListData()])
+      .then(() => {
+        // Ensure loader stays visible for at least 1.3 seconds
+        setTimeout(() => setIsLoading(false), 1300);
+      });
   }, []);
 
   if (isLoading) {
@@ -23,17 +55,15 @@ const ExperienceMain = () => {
   }
 
   return (
-    <>
-      <div className="content">
-        <section className="experience-section">
-          <ExperienceImage />
-          <div className="experience-text">
-            <ExperienceHeading />
-            <ExperienceLists />
-          </div>
-        </section>
-      </div>
-    </>
+    <div className="content">
+      <section className="experience-section">
+        <ExperienceImage data={imageData} />
+        <div className="experience-text">
+          <ExperienceHeading data={headingData} />
+          <ExperienceLists data={listData} />
+        </div>
+      </section>
+    </div>
   );
 };
 

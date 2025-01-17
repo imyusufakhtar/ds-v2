@@ -1,26 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const HighlightSection = () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    // Function to fetch data from an API
-    const fetchData = async () => {
-      try {
-        const response = await fetch("EducationsData/HighlightSection.json"); // Replace with your API endpoint
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []); // Empty dependency array ensures this effect runs only once
-
+const HighlightSection = ({ data }) => {
   if (!data) {
-    // return <div className="loading"></div>;
-    return null;
+    return null; // No data to display
   }
 
   return (
