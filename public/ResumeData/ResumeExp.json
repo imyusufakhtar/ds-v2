@@ -1,0 +1,47 @@
+{
+  "h2": "Experience",
+  "experience": [
+    {
+      "h3": "Software Developer, Fiverr",
+      "p": [
+        {
+          "strong": "Location:",
+          "text": "India (Remote)"
+        },
+        {
+          "strong": "Duration:",
+          "text": "Jan 2025 - Present"
+        },
+        "Delivered high-performance, scalable web applications, turning client ideas into smooth, responsive, and efficient web solutions. Specialized in React.js, Angular, HTML, CSS, JavaScript, JSON, REST APIs, Context API, Node.js, Tailwind CSS, Material UI, and API Integration."
+      ]
+    },
+    {
+      "h3": "Software Developer, Self Employed",
+      "p": [
+        {
+          "strong": "Location:",
+          "text": "India (Remote)"
+        },
+        {
+          "strong": "Duration:",
+          "text": "Nov 2024 - Jan 2025"
+        },
+        "Built 2+ custom websites for clients worldwide using React.js, achieving 99% client satisfaction. Integrated 5+ APIs and optimized performance, reducing load times by up to 40%. Experienced in React.js, Redux, JavaScript, REST APIs, Bootstrap, Tailwind CSS, and Material UI."
+      ]
+    },
+    {
+      "h3": "Software Developer, Delta India",
+      "p": [
+        {
+          "strong": "Location:",
+          "text": "Pune, India (Hybrid)"
+        },
+        {
+          "strong": "Duration:",
+          "text": "Jul 2022 - Sep 2024"
+        },
+        "Developed scalable React.js web applications supporting 20K+ users, enhancing engagement by 35% through performance optimizations and UI/UX design improvements. Improved SEO and reduced load times by 50% with SSR and React Router. Mentored 4+ junior developers and contributed to Agile workflows."
+      ]
+    }
+  ]
+}

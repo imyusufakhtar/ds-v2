@@ -1,0 +1,37 @@
+{
+  "experience": [
+    {
+      "title": "Software Developer",
+      "company": "Fiverr · Freelance",
+      "duration": "Jan 2025 - Present",
+      "responsibilities": [
+        "Delivered a high-performance, scalable web application to meet client needs and enhance user experience.",
+        "Focused on turning client ideas into reality, creating smooth, responsive, and efficient web solutions.",
+        "Skilled in React.js, Angular, HTML5, CSS, JavaScript, JSON, REST APIs, Context API, Node.js, Tailwind CSS, Material UI, and API Integration."
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "company": "Self Employed · Freelance",
+      "duration": "Nov 2024 - Jan 2025",
+      "responsibilities": [
+        "Built 2+ custom websites for clients worldwide using React.js, crafting dynamic, responsive user interfaces and earning 99% client satisfaction.",
+        "Integrated 5+ APIs and fine-tuned performance, reducing load times by up to 40%, ensuring smooth user experiences and successful project deliveries.",
+        "Proficient in React.js, Redux, JavaScript, REST APIs, Bootstrap, Tailwind CSS, and Material UI."
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "company": "Delta India, Pune, India (Remote)",
+      "duration": "Jul 2022 - Sep 2024",
+      "responsibilities": [
+        "Developed scalable React.js web applications supporting 20K+ users, enhancing user engagement by 35% through performance optimizations and refined UI/UX design.",
+        "Improved SEO and reduced load times by 50% with SSR and React Router, delivering a faster, more efficient user experience.",
+        "Collaborated with UI/UX and back-end teams to integrate RESTful APIs, achieving a 40% reduction in response times and improving data synchronization.",
+        "Mentored 4+ junior developers in React.js, fostering skill development and accelerating project delivery.",
+        "Contributed to Agile workflows, ensuring task prioritization and timely project completion, while continuously enhancing application performance.",
+        "Proficient in JavaScript, React.js, Redux, Context API, REST APIs, Webpack, React Router, Jest, Enzyme, and Agile Workflows."
+      ]
+    }
+  ]
+}

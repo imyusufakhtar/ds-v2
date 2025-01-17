@@ -1,0 +1,25 @@
+{
+  "h2": "Skills",
+  "skills": [
+    {
+      "strong": "Programming Languages:",
+      "text": "JavaScript, Java, Python, TypeScript, C++"
+    },
+    {
+      "strong": "Front-End Development:",
+      "text": "React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap, Redux, React Router, Context API"
+    },
+    {
+      "strong": "Back-End Development:",
+      "text": "Node.js, RESTful APIs, PostgreSQL, JSON"
+    },
+    {
+      "strong": "Tools & Technologies:",
+      "text": "Git, Webpack, Babel, React Developer Tools, Jest, Enzyme"
+    },
+    {
+      "strong": "Databases & Other:",
+      "text": "SQL, Cross-Browser Compatibility, API Integration, Agile Workflows, UI Debugging, SEO"
+    }
+  ]
+}

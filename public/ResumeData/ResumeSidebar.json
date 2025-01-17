@@ -1,0 +1,8 @@
+{
+  "img": {
+    "src": "images/mypic.jpg",
+    "alt": "Profile Image"
+  },
+  "h2": "Summary",
+  "p": "Software Developer with over 2 years of experience in front-end and full-stack web development, specializing in React.js and modern web technologies. Successfully developed high-performance web applications that support over 20,000 users, improving user engagement by up to 35%. Skilled in integrating RESTful APIs, optimizing performance, and enhancing SEO. Experienced with TypeScript, JavaScript (ES6+), React Router, Redux, Tailwind CSS, Bootstrap, Node.js, and PostgreSQL. Passionate about writing clean, maintainable code and mentoring junior developers. Aiming to contribute expertise in building scalable, high-performance web applications."
+}

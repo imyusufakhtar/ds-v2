@@ -1,0 +1,80 @@
+{
+  "h2": "Projects",
+  "projects": [
+    {
+      "h3": "Headless E-Commerce Platform",
+      "p": [
+        {
+          "strong": "Technologies:",
+          "text": "React.js, Node.js, PostgreSQL, RESTful APIs"
+        },
+        {
+          "strong": "Description:",
+          "text": "Developed a headless e-commerce platform for a wholesale supplier of branded wheels, tires, and performance parts & accessories. Focused on performance optimization, advanced product search, and API integrations to enhance sales conversions and scalability. Achieved a 300% sales boost post-implementation."
+        },
+        {
+          "a": {
+            "href": "https://github.com/your-repo/extreme-performance-ecommerce",
+            "text": "GitHub"
+          }
+        },
+        {
+          "a": {
+            "href": "https://your-live-site-link",
+            "text": "Live"
+          }
+        }
+      ]
+    },
+    {
+      "h3": "Influencer Marketing SaaS Platform",
+      "p": [
+        {
+          "strong": "Technologies:",
+          "text": "React.js, Node.js, PostgreSQL, RESTful APIs"
+        },
+        {
+          "strong": "Description:",
+          "text": "Built a SaaS platform designed for faster build times and enhanced SEO performance. Integrated third-party services and optimized the front-end to deliver a seamless user experience. Prioritized scalability and ensured a responsive, high-performing UI."
+        },
+        {
+          "a": {
+            "href": "https://github.com/your-repo/gatsby-saas",
+            "text": "GitHub"
+          }
+        },
+        {
+          "a": {
+            "href": "https://your-live-site-link",
+            "text": "Live"
+          }
+        }
+      ]
+    },
+    {
+      "h3": "Gamified Virtual Coaching & Learning Platform",
+      "p": [
+        {
+          "strong": "Technologies:",
+          "text": "React.js, Node.js, PostgreSQL, RESTful APIs"
+        },
+        {
+          "strong": "Description:",
+          "text": "Developed a gamified platform integrating user interaction features and API-driven content. Focused on front-end development with an emphasis on performance and responsive design for global users."
+        },
+        {
+          "a": {
+            "href": "https://github.com/your-repo/injoy-global-platform",
+            "text": "GitHub"
+          }
+        },
+        {
+          "a": {
+            "href": "https://your-live-site-link",
+            "text": "Live"
+          }
+        }
+      ]
+    }
+  ]
+}
