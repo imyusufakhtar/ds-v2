@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Loader } from '../Loader';
 
 const AboutSection = () => {
   const [data, setData] = useState(null);
@@ -20,7 +21,7 @@ const AboutSection = () => {
 
   // Render loading state or error message if needed
   if (!data) {
-    return null;
+    return <Loader/>;
   }
 
   return (
