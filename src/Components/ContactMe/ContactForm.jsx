@@ -16,10 +16,9 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    // Here you can handle form submission, like sending data to an API
     console.log("Form Data Submitted: ", formData);
-
-    // Clear the form after submission
+    // You can also clear the form after submission
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -30,6 +29,7 @@ const ContactForm = () => {
         If you have any questions or would like to get in touch, please fill out
         the form below:
       </p>
+      <br />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
