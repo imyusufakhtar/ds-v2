@@ -70,10 +70,10 @@ const Home = () => {
               className="fab fa-linkedin"
             ></a>
             <a
-              href="https://x.com/imyusufakhtar"
+              href="https://leetcode.com/u/imyusufakhtar/"
               target="_blank"
               rel="noopener noreferrer"
-              className="fab fa-twitter"
+              className="fa fa-external-link"
             ></a>
           </div>
           <a href="mailto:mdyusuf2790@gmail.com" className="button">
